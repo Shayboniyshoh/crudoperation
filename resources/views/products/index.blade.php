@@ -28,18 +28,21 @@
                             <td>{{ $product->detail }}</td>
                             <td>
                                 <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                                    {{-- <a href="{{ route('products.show'), $product->id }}" class="btn btn-info">Details</a>
-                                    <a href="{{ route('products.edit'), $product->id }}" class="btn btn-primary">Edit</a>
+                                    <a class="btn btn-success"
+                                        href="{{ route('products.show', $product->id) }}">Details</a>
+                                    <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button> --}}
+                                    <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-            {{ $products->links() }}
+            <div class="d-flex justify-content-center">
+                {{ $products->links() }}
+            </div>
         </div>
         <a href="{{ route('products.create') }}" class="btn btn-outline-primary">Add Product</a>
     </div>
