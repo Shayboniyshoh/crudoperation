@@ -14,6 +14,6 @@
                 <button class="btn btn-outline-success text-uppercase my-2" type="submit">Create</button>
             </form>
         </div>
-        <a href="{{ route('products.index') }}" class="btn btn-outline-primary">Back to list</a>
+        <a href="{{ route('products.index') }}" class="btn btn-outline-dark">Back to list</a>
     </div>
 @endsection
